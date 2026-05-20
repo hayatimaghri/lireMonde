@@ -18,7 +18,7 @@
                 <a href="#A lire">À lire</a>
                 <a href="#">Admin</a>
             </ul>
-              <input type="text" placeholder="Rechercher...">
+          <input type="text" id="searchInput" placeholder="Rechercher...">
         </nav>
     </header>
     <main>
@@ -68,12 +68,23 @@
 
     </section>
 
+    <div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal">X</span>
+
+    <img id="modalImg" />
+    <h2 id="modalTitle"></h2>
+    <p id="modalAuthor"></p>
+    <p id="modalGenre"></p>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
     <!-- FAVORIS -->
 
     <section class="favoris">
-
-        <h2>À lire 📚❤️</h2>
-
+     <h2>À lire 📚❤️</h2>
+ 
     </section>
 
 </main>

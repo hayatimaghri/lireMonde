@@ -136,7 +136,6 @@ body{
 margin-top: 5px;
 }
 
-/* label */
 
 .filters label{
     font-size: 22px;
@@ -146,7 +145,6 @@ margin-top: 5px;
     letter-spacing: 1px;
 }
 
-/* select style */
 
 #select{
     padding: 14px 25px;
@@ -162,14 +160,12 @@ margin-top: 5px;
     transition: 0.3s ease;
 }
 
-/* hover */
 
 #select:hover{
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(99,102,241,0.4);
 }
 
-/* options */
 
 #select option{
     background-color: white;
@@ -195,7 +191,6 @@ main{
     margin-bottom: 40px;
 }
 
-/* ===== CARD ===== */
 
 .card {
     background: white;
@@ -258,7 +253,6 @@ main{
     background: linear-gradient(135deg,#4f46e5,#7c3aed);
 }
 
-/* ===== SECTION TITLE ===== */
 
 .hero-right h2 {
     text-align: center;
@@ -279,6 +273,67 @@ main{
     transform: translateX(-50%);
     bottom: -15px;
     border-radius: 10px;
+}
+/* modal*/
+
+.hidden{
+    display: none !important;
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: #ffffff;
+  width: 420px;
+  max-width: 90%;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  animation: pop 0.25s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: 0.2s;
+}
+
+#closeModal:hover {
+  color: red;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 /* ===== FOOTER ===== */
  
