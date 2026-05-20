@@ -1,0 +1,85 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "titre": "1984",
+      "auteur": "George Orwell",
+      "genre": "Science-fiction",
+      "description": "Dans une société dominée par un régime totalitaire, Winston Smith vit sous la surveillance permanente de Big Brother. Fatigué du contrôle et de la manipulation de la vérité, il commence à remettre en question le système. Son désir de liberté le pousse à entrer dans une rébellion dangereuse contre le pouvoir.",
+      "couverture": "images/livre1.jpg",
+      "aLire": false
+    },
+    {
+      "id": 2,
+      "titre": "Le Petit Prince",
+      "auteur": "Antoine de Saint-Exupéry",
+      "genre": "Classique",
+      "description": "Le Petit Prince quitte sa planète pour voyager à travers l’univers et rencontrer différents personnages. À travers ses aventures, il découvre les défauts des adultes et l’importance des sentiments humains. Ce conte poétique transmet des leçons profondes sur l’amitié, l’amour et la simplicité.",
+      "couverture": "images/livre 2.jpg",
+      "aLire": false
+    },
+    {
+      "id": 3,
+      "titre": "Harry Potter à l'école des sorciers",
+      "auteur": "J.K. Rowling",
+      "genre": "Fantasy",
+      "description": "Harry Potter apprend le jour de ses onze ans qu’il est un sorcier et rejoint l’école de Poudlard. Il découvre un monde rempli de magie, de mystères et de créatures fantastiques. Avec ses amis Ron et Hermione, il devra affronter des forces obscures liées à son passé.",
+      "couverture": "images/livre 3.jpg",
+      "aLire": true
+    },
+    {
+      "id": 4,
+      "titre": "Roméo et Juliette",
+      "auteur": "William Shakespeare",
+      "genre": "Drame",
+      "description": "Roméo et Juliette tombent amoureux malgré la haine entre leurs deux familles ennemies. Leur relation secrète devient rapidement compliquée à cause des conflits et des rivalités. Cette tragédie raconte un amour intense qui mène à une fin bouleversante et inoubliable.",
+      "couverture": "images/livre 4.jpg",
+      "aLire": false
+    },
+    {
+      "id": 5,
+      "titre": "Dune",
+      "auteur": "Frank Herbert",
+      "genre": "Science-fiction",
+      "description": "Paul Atréides arrive sur Arrakis, une planète désertique essentielle pour l’univers grâce à une ressource très précieuse. Après une trahison contre sa famille, il doit survivre dans un environnement hostile et comprendre son destin. Entre politique, religion et guerre, Paul devient une figure centrale d’un immense conflit galactique.",
+      "couverture": "images/livre 6.jpg",
+      "aLire": true
+    },
+    {
+      "id": 6,
+      "titre": "Les Misérables",
+      "auteur": "Victor Hugo",
+      "genre": "Classique",
+      "description": "Jean Valjean, ancien prisonnier, cherche à reconstruire sa vie après des années de souffrance et d’injustice. Poursuivi sans relâche par l’inspecteur Javert, il tente de devenir un homme honnête et généreux. Le roman décrit la pauvreté, les inégalités sociales et l’espoir dans la France du XIXe siècle.",
+      "couverture": "images/livre 7.jpg",
+      "aLire": false
+    },
+    {
+      "id": 7,
+      "titre": "Le Seigneur des Anneaux",
+      "auteur": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "description": "Frodon Sacquet hérite de l’Anneau Unique, un objet dangereux convoité par le seigneur maléfique Sauron. Accompagné de compagnons courageux, il entreprend un long voyage pour détruire l’anneau. Cette aventure épique mélange magie, batailles et amitié dans l’univers fantastique de la Terre du Milieu.",
+      "couverture": "images/livre 8.jpg",
+      "aLire": false
+    },
+    {
+      "id": 8,
+      "titre": "Hamlet",
+      "auteur": "William Shakespeare",
+      "genre": "Drame",
+      "description": "Après la mort mystérieuse de son père, le prince Hamlet découvre que son oncle est responsable du crime. Déchiré entre vengeance, doute et folie, il cherche la vérité dans un royaume rempli de mensonges. Cette tragédie célèbre explore les émotions humaines et les conséquences de la trahison.",
+      "couverture": "images/livre 9.jpg",
+      "aLire": false
+    },
+    {
+      "id": 9,
+      "titre": "Fondation",
+      "auteur": "Isaac Asimov",
+      "genre": "Science-fiction",
+      "description": "Hari Seldon prévoit grâce à la psychohistoire la chute prochaine de l’Empire Galactique. Pour préserver les connaissances humaines, il crée la Fondation, un groupe chargé de reconstruire la civilisation. Le roman suit les défis politiques, scientifiques et stratégiques rencontrés à travers plusieurs générations.",
+      "couverture": "images/livre 10.jpg",
+      "aLire": true
+    }
+  ]
+}
