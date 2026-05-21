@@ -1,5 +1,4 @@
-const ULR_API="http://localhost:3000/books";
-
+const ULR_API="http://localhost:3001/books";
 let allBooks = [];
 
 async function fetchBooks() {
@@ -62,3 +61,37 @@ document.getElementById("closeModal").onclick = () => {
   document.getElementById("modal").classList.add("hidden");
 };
 
+// catégories
+function filterBooks() {
+  const value = document.getElementById("select").value;
+
+  if (value === "tous") {
+    renderBooks(allBooks);
+    return;
+  }
+
+  const filtered = allBooks.filter(book =>
+    book.genre.toLowerCase() === value.toLowerCase()
+  );
+
+  renderBooks(filtered);
+}
+document.getElementById("select").addEventListener("change", filterBooks);
+
+// searchInput
+
+function searchInput() {
+
+  const value = document.getElementById("searchInput").value.toLowerCase();
+
+  const filtered = allBooks.filter(book =>
+    book.titre.toLowerCase().includes(value)
+  );
+
+  renderBooks(filtered);
+}
+
+document.getElementById("searchInput")
+  .addEventListener("input", searchInput);
+
+  
