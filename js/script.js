@@ -1,4 +1,4 @@
-const ULR_API="http://localhost:3001/books";
+const ULR_API="http://localhost:3002/books";
 let allBooks = [];
 
 async function fetchBooks() {
@@ -19,7 +19,7 @@ function renderBooks(books){
     books.forEach(book=>{
         livres.innerHTML +=`
        <div class="card">
-            <img src="${book.couverture}" alt="${book.titre}">
+            <img src="${book.couverture}" alt="${book.titre}"  data-id="${book.id}"  class="book-img">
 
             <h3>${book.titre}</h3>
 
@@ -36,6 +36,7 @@ fetchBooks() ;
 // modal
 
 function openModal(book){
+  
   document.getElementById("modal").classList.remove("hidden");
 
   document.getElementById("modalImg").src = book.couverture;
@@ -46,15 +47,18 @@ function openModal(book){
 }
 
 document.getElementById("livres").addEventListener("click", async (e) => {
-  if (e.target.classList.contains("genre-btn")) {
-    
-    const id = e.target.dataset.id;
 
-    const res = await fetch(`${ULR_API}/${id}`);
-    const book = await res.json();
+  if(!e.target.classList.contains("book-img"))
+  return;
 
-    openModal(book);
-  }
+  const id = e.target.dataset.id;
+
+  const res = await fetch(`${ULR_API}/${id}`);
+
+  const book = await res.json();
+
+  openModal(book);
+
 });
 
 document.getElementById("closeModal").onclick = () => {
@@ -93,5 +97,5 @@ function searchInput() {
 
 document.getElementById("searchInput")
   .addEventListener("input", searchInput);
-
   
+

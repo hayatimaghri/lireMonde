@@ -248,12 +248,6 @@ main{
     transition: 0.3s ease;
 }
 
-.card button:hover {
-    transform: scale(1.08);
-    background: linear-gradient(135deg,#4f46e5,#7c3aed);
-}
-
-
 .hero-right h2 {
     text-align: center;
     font-size: 42px;
@@ -275,66 +269,257 @@ main{
     border-radius: 10px;
 }
 /* emodal*/
-
 .hidden{
-    display: none !important;
-}
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(4px);
+  display:none !important;
 }
 
-.modal-content {
-  background: #ffffff;
-  width: 420px;
-  max-width: 90%;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  animation: pop 0.25s ease;
+/* ================= MODAL ================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,0.75);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:1000;
+
+  backdrop-filter:blur(8px);
+
+  padding:20px;
 }
 
-.modal-content img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 10px;
+/* ================= CONTENT ================= */
+
+.modal-content{
+
+  width:850px;
+  max-width:95%;
+
+  background:#ffffff;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  display:flex;
+  gap:30px;
+
+  padding:30px;
+
+  position:relative;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.35);
+
+  animation:popup 0.35s ease;
 }
 
-#closeModal {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 22px;
-  cursor: pointer;
-  font-weight: bold;
-  color: #333;
-  transition: 0.2s;
+/* ================= IMAGE ================= */
+
+.modal-content img{
+
+  width:280px;
+  height:420px;
+
+  object-fit:cover;
+
+  border-radius:22px;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,0.25);
+
+  transition:0.3s;
 }
 
-#closeModal:hover {
-  color: red;
+.modal-content img:hover{
+  transform:scale(1.03);
 }
 
-@keyframes pop {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
+/* ================= BOOK INFO ================= */
+
+.modal-info{
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+
+/* TITLE */
+.modal-info h2{
+  font-size:34px;
+  font-weight:700;
+  color:#111827;
+
+  margin-bottom:12px;
+}
+
+/* AUTHOR */
+.modal-author{
+  font-size:18px;
+  color:#6b7280;
+
+  margin-bottom:14px;
+}
+
+/* GENRE */
+.modal-genre{
+  display:inline-flex;
+
+  padding:8px 18px;
+
+  border-radius:999px;
+
+  background:#ede9fe;
+  color:#6d28d9;
+
+  font-size:13px;
+  font-weight:600;
+
+  margin-bottom:24px;
+}
+
+/* DESCRIPTION */
+.modal-desc{
+  font-size:15px;
+
+  color:#374151;
+
+  line-height:1.9;
+
+  text-align:left;
+
+  width:100%;
+}
+/* ================= DETAILS ================= */
+
+.book-details{
+
+  display:flex;
+
+  gap:16px;
+
+  margin-bottom:30px;
+
+  flex-wrap:wrap;
+}
+
+.detail-card{
+
+  background:#f9fafb;
+
+  border:1px solid #f3f4f6;
+
+  padding:16px 20px;
+
+  border-radius:18px;
+
+  min-width:140px;
+}
+
+.detail-title{
+
+  font-size:12px;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  color:#9ca3af;
+
+  margin-bottom:6px;
+
+  display:block;
+}
+
+.detail-value{
+
+  font-size:15px;
+
+  color:#111827;
+
+  font-weight:600;
+}
+
+/* ================= BUTTON ================= */
+
+.read-btn{
+
+  border:none;
+
+  padding:15px 24px;
+
+  border-radius:16px;
+
+  background:
+  linear-gradient(135deg,#7c3aed,#4f46e5);
+
+  color:white;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.read-btn:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 12px 25px rgba(124,58,237,0.25);
+}
+
+/* CLOSE */
+
+#closeModal{
+
+  position:absolute;
+
+  top:18px;
+  right:22px;
+
+  font-size:28px;
+
+  cursor:pointer;
+
+  color:#6b7280;
+
+  transition:0.3s;
+}
+
+#closeModal:hover{
+  color:#ef4444;
+  transform:rotate(90deg);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes popup{
+
+  from{
+    transform:translateY(40px);
+    opacity:0;
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+
+  to{
+    transform:translateY(0);
+    opacity:1;
   }
+
 }
+
 /* ===== FOOTER ===== */
  
 footer{

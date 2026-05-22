@@ -1,16 +1,16 @@
 {
   "books": [
     {
-      "id": 1,
       "titre": "1984",
       "auteur": "George Orwell",
-      "genre": "Science-fiction",
+      "genre": "Fantasy",
       "description": "Dans une société dominée par un régime totalitaire, Winston Smith vit sous la surveillance permanente de Big Brother. Fatigué du contrôle et de la manipulation de la vérité, il commence à remettre en question le système. Son désir de liberté le pousse à entrer dans une rébellion dangereuse contre le pouvoir.",
       "couverture": "images/livre1.jpg",
-      "aLire": false
+      "aLire": false,
+      "id": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "titre": "Le Petit Prince",
       "auteur": "Antoine de Saint-Exupéry",
       "genre": "Classique",
@@ -19,7 +19,7 @@
       "aLire": false
     },
     {
-      "id": 3,
+      "id": "3",
       "titre": "Harry Potter à l'école des sorciers",
       "auteur": "J.K. Rowling",
       "genre": "Fantasy",
@@ -28,7 +28,7 @@
       "aLire": true
     },
     {
-      "id": 4,
+      "id": "4",
       "titre": "Roméo et Juliette",
       "auteur": "William Shakespeare",
       "genre": "Drame",
@@ -37,7 +37,7 @@
       "aLire": false
     },
     {
-      "id": 5,
+      "id": "5",
       "titre": "Dune",
       "auteur": "Frank Herbert",
       "genre": "Science-fiction",
@@ -46,7 +46,7 @@
       "aLire": true
     },
     {
-      "id": 6,
+      "id": "6",
       "titre": "Les Misérables",
       "auteur": "Victor Hugo",
       "genre": "Classique",
@@ -55,16 +55,16 @@
       "aLire": false
     },
     {
-      "id": 7,
       "titre": "Le Seigneur des Anneaux",
       "auteur": "J.R.R. Tolkien",
       "genre": "Fantasy",
       "description": "Frodon Sacquet hérite de l’Anneau Unique, un objet dangereux convoité par le seigneur maléfique Sauron. Accompagné de compagnons courageux, il entreprend un long voyage pour détruire l’anneau. Cette aventure épique mélange magie, batailles et amitié dans l’univers fantastique de la Terre du Milieu.",
       "couverture": "images/livre 8.jpg",
-      "aLire": false
+      "aLire": true,
+      "id": "7"
     },
     {
-      "id": 8,
+      "id": "8",
       "titre": "Hamlet",
       "auteur": "William Shakespeare",
       "genre": "Drame",
@@ -73,7 +73,7 @@
       "aLire": false
     },
     {
-      "id": 9,
+      "id": "9",
       "titre": "Fondation",
       "auteur": "Isaac Asimov",
       "genre": "Science-fiction",
@@ -81,5 +81,6 @@
       "couverture": "images/livre 10.jpg",
       "aLire": true
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -1,0 +1,128 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - BiblioManage</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <img src="images/livre2.png" alt="">
+            <h1 class="logo">  LireMonde</h1>
+            <ul class="menu">
+                <a href="index.html">Accueil</a>
+    </div>
+
+    <button class="add-btn" id="openModalBtn">
+      <i class="fa-solid fa-plus"></i>
+      Ajouter un livre
+    </button>
+  </nav>
+
+  <section class="admin-section">
+
+    <div class="table-container">
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Couverture</th>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Genre</th>
+            <th>À lire</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="booksTableBody">
+
+
+        </tbody>
+      </table>
+
+    </div>
+
+  </section>
+
+  <div class="modal" id="bookModal">
+
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 id="modalTitle">Ajouter un livre</h2>
+
+        <button class="close-btn" id="closeModalBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="bookForm">
+
+        <input type="hidden" id="bookId"/>
+
+        <div class="form-group">
+          <label>Titre</label>
+          <input type="text" id="title" required />
+        </div>
+
+        <div class="form-group">
+          <label>Auteur</label>
+          <input type="text" id="author" required />
+        </div>
+
+        <div class="form-group">
+          <label>Genre</label>
+
+          <select id="genre" required>
+            <option value="">Choisir un genre</option>
+            <option value="Science-fiction">Science-fiction</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Classique">Classique</option>
+            <option value="Drame">Drame</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="description" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>URL couverture</label>
+          <input type="text" id="cover"/>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="aLire"/>
+          <label>Ajouter à la liste "À lire"</label>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          Enregistrer
+        </button>
+          <button type="button" class="cancel-btn" id="cancelBtn">
+    Annuler
+  </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="loader-container" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <script src="js/admin.js"></script>
+
+</body>
+</html>
