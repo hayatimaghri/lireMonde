@@ -19,7 +19,7 @@ function renderBooks(books){
     books.forEach(book=>{
         livres.innerHTML +=`
        <div class="card">
-            <img src="${book.couverture}" alt="${book.titre}"  data-id="${book.id}"  class="book-img">
+           <img src="${book.couverture}" alt="${book.titre}" data-id="${book.id}"  class="book-img">
 
             <h3>${book.titre}</h3>
 
@@ -36,7 +36,6 @@ fetchBooks() ;
 // modal
 
 function openModal(book){
-  
   document.getElementById("modal").classList.remove("hidden");
 
   document.getElementById("modalImg").src = book.couverture;
@@ -48,8 +47,7 @@ function openModal(book){
 
 document.getElementById("livres").addEventListener("click", async (e) => {
 
-  if(!e.target.classList.contains("book-img"))
-  return;
+  if (!e.target.classList.contains("book-img")) return;
 
   const id = e.target.dataset.id;
 
@@ -83,19 +81,82 @@ function filterBooks() {
 document.getElementById("select").addEventListener("change", filterBooks);
 
 // searchInput
+function searchInput(){
 
-function searchInput() {
+    const value = document.getElementById("searchInput")
+    .value
+    .toLowerCase();
 
-  const value = document.getElementById("searchInput").value.toLowerCase();
+    const filtered = allBooks.filter(book =>
+        book.titre.toLowerCase().includes(value)
+    );
 
-  const filtered = allBooks.filter(book =>
-    book.titre.toLowerCase().includes(value)
-  );
-
-  renderBooks(filtered);
+    renderBooks(filtered);
 }
 
 document.getElementById("searchInput")
-  .addEventListener("input", searchInput);
-  
+.addEventListener("input", searchInput);
 
+
+
+let listeLire = [];
+
+document.getElementById("btnLire").addEventListener("click", () => {
+
+  const titre = document.getElementById("modalTitle").textContent;
+
+  const book = allBooks.find(book => book.titre === titre);
+
+  const existe = listeLire.find(item => item.id === book.id);
+
+  if(existe) return;
+
+  listeLire.push(book);
+
+  afficherListeLire();
+
+});
+
+
+function afficherListeLire(){
+
+  const container = document.getElementById("livresLire");
+
+  container.innerHTML = "";
+
+  listeLire.forEach(book => {
+
+    container.innerHTML += `
+
+      <div class="card-lire">
+
+        <img src="${book.couverture}" alt="${book.titre}">
+
+        <h3>${book.titre}</h3>
+
+        <p>${book.auteur}</p>
+
+        <button class="supprimer-btn" data-id="${book.id}">
+          Supprimer
+        </button>
+
+      </div>
+
+    `;
+  });
+
+  document.querySelectorAll(".supprimer-btn").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      const id = btn.dataset.id;
+
+      listeLire = listeLire.filter(book => book.id != id);
+
+      afficherListeLire();
+
+    });
+
+  });
+
+}

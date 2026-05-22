@@ -68,25 +68,42 @@
 
     </section>
 
-    <div id="modal" class="modal hidden">
+   <div id="modal" class="modal hidden">
+
   <div class="modal-content">
-    <span id="closeModal">X</span>
+
+    <span id="closeModal">×</span>
 
     <img id="modalImg" />
-    <h2 id="modalTitle"></h2>
-    <p id="modalAuthor"></p>
-    <p id="modalGenre"></p>
-    <p id="modalDesc"></p>
+
+    <div class="modal-info">
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalAuthor" class="modal-author"></p>
+
+      <span id="modalGenre" class="modal-genre"></span>
+
+      <p id="modalDesc" class="modal-desc"></p>
+
+      <button id="btnLire" class="read-btn">
+        ❤️ Ajouter à lire
+      </button>
+
+    </div>
+
   </div>
+
 </div>
 
     <!-- FAVORIS -->
+<section class="favoris" id="listeLire">
 
-    <section class="favoris">
-     <h2>À lire 📚❤️</h2>
- 
-    </section>
+  <h2>À lire 📚❤️</h2>
 
+  <div id="livresLire"></div>
+
+</section>
 </main>
 
 <footer>
